@@ -13,6 +13,7 @@ function RegisterContainer() {
   async function handleRegister(data) {
     try {
       const response = await api.Register(data);
+      console.log(response.data)
       localStorage.setItem("token", response.data.message);
       setData({})
       navigate("/home")

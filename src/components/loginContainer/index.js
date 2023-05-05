@@ -13,6 +13,7 @@ function LoginContainer() {
   async function handleLogin(data) {
     try {
       const response = await api.Login(data);
+      console.log(response.data)
       localStorage.setItem("token", response.data.message);
       setData({})
       navigate("/home")
